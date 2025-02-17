@@ -1,0 +1,143 @@
+@font-face {
+	font-family: PlusJakartaSans;
+	font-display: swap;
+	src: url('../fonts/PlusJakartaSans-Regular.woff2') format('woff2'),
+		url('../fonts/PlusJakartaSans-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: PlusJakartaSans;
+	font-display: swap;
+	src: url('../fonts/PlusJakartaSans-Medium.woff2') format('woff2'),
+		url('../fonts/PlusJakartaSans-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: PlusJakartaSans;
+	font-display: swap;
+	src: url('../fonts/PlusJakartaSans-Bold.woff2') format('woff2'),
+		url('../fonts/PlusJakartaSans-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: PlusJakartaSans;
+	font-display: swap;
+	src: url('../fonts/PlusJakartaSans-ExtraBold.woff2') format('woff2'),
+		url('../fonts/PlusJakartaSans-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+}
+
+
+@mixin heading1 {
+	font-size: 32px;
+	font-weight: 800;
+	line-height: 1.17em;
+
+	@media (min-width: $pc) {
+		letter-spacing: -3.04px;
+		font-size: 76px;
+	}
+}
+
+@mixin heading2 {
+	font-size: 32px;
+	font-weight: 800;
+	line-height: 1.35em;
+
+	@media (min-width: $pc) {
+		font-size: 48px;
+	}
+}
+
+@mixin heading3 {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: normal;
+
+	@media (min-width: $pc) {
+		font-size: 32px;
+	}
+}
+
+@mixin heading4 {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: normal;
+
+	@media (min-width: $pc) {
+		font-size: 24px;
+	}
+}
+
+@mixin heading5 {
+	font-size: 16px;
+	font-weight: 800;
+	line-height: normal;
+
+	@media (min-width: $pc) {
+		font-size: 18px;
+	}
+}
+
+@mixin big-text {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: normal;
+
+	@media (min-width: $pc) {
+		font-size: 20px;
+	}
+}
+
+@mixin text {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.8em;
+
+	@media (min-width: $pc) {
+		font-size: 16px;
+	}
+}
+
+h1 {
+	@include heading1;
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease-in-out;
+}
+
+h2 {
+	@include heading2;
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease-in-out;
+}
+
+h3 {
+	@include heading3;
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease-in-out;
+}
+
+h4 {
+	@include heading4;
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease-in-out;
+}
+
+h5 {
+	@include text;
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease-in-out;
+}
+
+h6 {
+	@include text;
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease-in-out;
+}

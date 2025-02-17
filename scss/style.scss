@@ -1,0 +1,19 @@
+@import 'global/colors';
+@import 'global/variables';
+@import 'global/mixins';
+@import 'global/typography';
+@import 'global/base';
+@import 'global/icons';
+@import 'global/common';
+@import 'global/reset';
+@import 'global/buttons';
+@import 'global/links';
+
+
+@import 'blocks/header';
+@import 'blocks/hero';
+@import 'blocks/features';
+@import 'blocks/services';
+@import 'blocks/reviews';
+@import 'blocks/locations';
+@import 'blocks/footer';

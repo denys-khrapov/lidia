@@ -1,0 +1,148 @@
+.hero {
+	padding: 64px 0;
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		height: 150%;
+		width: 200vw;
+		transform-origin: left bottom;
+		background-color: $blue;
+		box-shadow: (0px 30px 60px rgba(71, 74, 87, 0.25));
+		bottom: 0;
+		display: none;
+	}
+
+	&::before {
+		border-radius: 50px;
+		transform: skewX(-30deg);
+		left: calc(50% + 30px);
+	}
+
+	&::after {
+		left: calc(50% + 450px);
+		transform: skewX(30deg);
+		border-bottom-left-radius: 50px;
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 32px;
+
+		@media (min-width:$pc) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__left-col {
+		width: 100%;
+		position: relative;
+		z-index: 2;
+
+		@media (min-width:$pc) {
+			width: 50%;
+		}
+
+		h1 {
+			color: $blue-dark;
+
+			i {
+				text-decoration: underline;
+				color: $blue;
+				font-style: normal;
+				text-shadow: 0px 0px 8px $white;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+
+			@media (min-width:$pc) {
+				&:not(:last-child) {
+					margin-bottom: 32px;
+				}
+			}
+		}
+	}
+
+	&__text-holder {
+		color: $text;
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+
+		@media (min-width:$pc) {
+			&:not(:last-child) {
+				margin-bottom: 32px;
+			}
+		}
+
+	}
+
+	&__right-col {
+		width: 100%;
+		position: relative;
+		z-index: 2;
+
+		@media (min-width:$pc) {
+			width: 50%;
+		}
+	}
+
+	&__items {
+
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 24px;
+		width: 100%;
+		max-width: 680px;
+		margin: 0 auto;
+
+		@media (min-width:$pc) {
+			max-width: 100%;
+			margin: 0;
+		}
+	}
+
+	&__item {
+		display: block;
+		line-height: 0;
+		@include box-shadow;
+
+		img {
+			border-radius: 10px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&:nth-child(1) {
+			grid-row: span 2;
+			align-self: end;
+		}
+
+		&:nth-child(2) {
+			max-width: 143px;
+		}
+
+
+		&:nth-child(3) {
+			grid-row: span 2;
+			align-self: center;
+			justify-self: end;
+			max-width: 150px;
+		}
+
+		&:nth-child(4) {
+			grid-row: span 2;
+			justify-self: end;
+			align-self: end;
+
+		}
+	}
+}

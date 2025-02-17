@@ -1,0 +1,22 @@
+# ⛔ Ігноруємо `node_modules` (всі встановлені пакети)
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# ⛔ Ігноруємо згенеровані CSS та JS файли (залишаємо лише вихідні SCSS та JS)
+css/*.css.map
+js/*.map
+
+# ⛔ Ігноруємо файли кешу та логів
+.DS_Store
+Thumbs.db
+*.log
+
+# ⛔ Ігноруємо файли IDE (VS Code, JetBrains)
+.vscode/
+.idea/
+*.iml
+
+# ⛔ Ігноруємо вихідні сорсмапи (якщо вони не потрібні)
+*.map

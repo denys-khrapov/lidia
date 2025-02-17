@@ -1,0 +1,22 @@
+.title-box {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+
+	span {
+		color: $blue;
+		text-transform: uppercase;
+		@include heading5;
+		letter-spacing: 1.71px;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 45px;
+	}
+
+	@media (min-width:$pc) {
+		&:not(:last-child) {
+			margin-bottom: 90px;
+		}
+	}
+}

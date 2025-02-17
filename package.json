@@ -1,0 +1,22 @@
+{
+	"scripts": {
+		"build:css": "postcss css/style.css -o css/style.min.css",
+		"build:js": "terser js/main.js -o js/main.min.js --compress --mangle",
+		"build": "npm run build:css && npm run build:js"
+	},
+	"notes": {
+		"build:css": "Запуск мінімізації CSS: npm run build:css",
+		"build:js": "Запуск мінімізації JS: npm run build:js",
+		"build": "Запуск обох процесів однією командою: npm run build"
+	},
+	"dependencies": {
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.5.1",
+		"postcss-cli": "^11.0.0",
+		"postcss-sort-media-queries": "^5.2.0"
+	},
+	"devDependencies": {
+		"cssnano": "^7.0.6",
+		"terser": "^5.38.1"
+	}
+}
